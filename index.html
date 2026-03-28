@@ -1,221 +1,9 @@
-vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 4</div></div><div class="vname">— सुनीता देवी, लखनऊ</div><div class="vstars">★★★★★</div></div>
-        <div class="vslide"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 5</div></div><div class="vname">— विकास गुप्ता, जयपुर</div><div class="vstars">★★★★★</div></div>
-      </div>
-    </div>
-    <button class="sarrow" id="next">&#8250;</button>
-  </div>
-  <div class="sdots" id="sdots"></div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="flogo">
-    <img src="logo.png" alt="RN Herbal" onerror="this.style.display='none'">
-    <span>RN Herbal</span>
-  </div>
-  <p class="ftag">प्रकृति की शक्ति, आपके स्वास्थ्य के लिए</p>
-  <p class="fdis">* यह product Ayurvedic है। Results may vary. Consult a doctor if needed. यह किसी बीमारी का medical treatment नहीं है।</p>
-  <p class="fcopy">© 2026 RN Herbal. All Rights Reserved.</p>
-</footer>
-
-<script>
-// Sticky nav
-const snav=document.getElementById('snav');
-new IntersectionObserver(([e])=>snav.classList.toggle('show',!e.isIntersecting),{threshold:.05}).observe(document.querySelector('.hero'));
-
-// Slider
-const track=document.getElementById('vtrack');
-const slides=[...track.querySelectorAll('.vslide')];
-const dotsEl=document.getElementById('sdots');
-let cur=1;
-slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===cur?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);});
-function go(n){
-  cur=Math.max(0,Math.min(slides.length-1,n));
-  slides.forEach((s,i)=>s.classList.toggle('active',i===cur));
-  [...dotsEl.querySelectorAll('.dot')].forEach((d,i)=>d.classList.toggle('on',i===cur));
-  const cw=track.parentElement.offsetWidth;
-  let off=0;
-  for(let i=0;i<cur;i++)off+=(slides[i].offsetWidth||180)+20;
-  off-=cw/2-(slides[cur].offsetWidth||220)/2;
-  track.style.transform=`translateX(-${Math.max(0,off)}px)`;
-}
-document.getElementById('prev').onclick=()=>go(cur-1);
-document.getElementById('next').onclick=()=>go(cur+1);
-let tx=0;
-track.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
-track.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40)go(cur+(d>0?1:-1));},{passive:true});
-window.addEventListener('load',()=>go(1));
-window.addEventListener('resize',()=>go(cur));
-setInterval(()=>go((cur+1)%slides.length),5000);
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-60,behavior:'smooth'});}
-  });
-});
-</script>
-</b    <a href="#order" class="btn">🛒 Order Now</a>
-  </div>
-  <div class="hero-body">
-    <div class="pill">⚠️</div>
-    <h1 class="hook">
-      यदि अल्ट्रासाउन्ड रिपोर्टमा<br>
-      <span class="glow">पत्थरी देखियो भने</span><br>
-      र डाक्टरले<br>
-      <span class="glo2">शल्यक्रिया सुझाव दिन्छन् भने —</span>
-    </h1>
-    <div class="stop-box">🛑 <strong>त्यसैले अब पर्खनुहोस्</strong>।</strong> 🛑</div>
-    <p class="hero-sub">
-    <a href="#order" class="btn btn-gold btn-lg">✨ अभी Order करें – ₹4,000 में</a>
-  </div>
-</header>
-
-<!-- PRODUCTS -->
-<section class="sec" id="products">
-  <div class="sec-label">हमारे उत्पाद</div>
-  <h2 class="sec-title">Kidney & Gallbladder Stone का<br><span>प्राकृतिक समाधान</span></h2>
-  <p class="sec-sub">100% Ayurvedic • No Side Effects • Trusted by Thousands</p>
-  <div class="prod-grid">
-    <div class="pcard">
-      <div class="pbadge">Best Seller</div>
-      <div class="pimg"><div class="pbox pw"><div class="ico">🌿</div><div class="lbl">STONE<br>CRASH</div><div class="sub">Powder</div></div></div>
-      <div class="pinfo">
-        <h3>Stone Crash Powder</h3>
-        <p class="ptag">Ayurvedic Treatment for Kidney & Gallbladder Stone</p>
-        <ul class="pbens">
-          <li>✅ Kidney & Gallbladder Stone को तोड़ता है</li>
-          <li>✅ Urinary Tract Infection में असरदार</li>
-          <li>✅ Kidney को Naturally Protect करता है</li>
-          <li>✅ दर्द और जलन से तुरंत राहत</li>
-        </ul>
-        <span class="pmeta">100 GM | Powder Form</span>
-      </div>
-    </div>
-    <div class="pcard feat">
-      <div class="pbadge pfeat-badge">Most Effective</div>
-      <div class="pimg"><div class="pbox pc"><div class="ico">💊</div><div class="lbl">STONE<br>GO</div><div class="sub">Capsule</div></div></div>
-      <div class="pinfo">
-        <h3>Stone-Go Capsule</h3>
-        <p class="ptag">Ayurvedic Treatment for Kidney & Gallbladder Stone</p>
-        <ul class="pbens">
-          <li>✅ Stone को पूरी तरह Dissolve करे</li>
-          <li>✅ Gallbladder Stone के लिए प्रभावी</li>
-          <li>✅ Renal Colic & Strangury में राहत</li>
-          <li>✅ Urinary Bladder Stone में असरदार</li>
-        </ul>
-        <span class="pmeta">60 Capsules | Easy to Take</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing-bg" id="order">
-  <div class="sec-label">Special Offer</div>
-  <h2 class="sec-title">आज ही Order करें —<br><span>Limited Time Offer!</span></h2>
-  <div class="pcrd">
-    <div class="pribbon">🔥 43% से ज़्यादा OFF</div>
-    <div class="pitems">
-      <div class="pitem"><span>Stone Crash Powder (100gm)</span><span class="ck">✓</span></div>
-      <div class="pitem"><span>Stone-Go Capsule (60 Caps)</span><span class="ck">✓</span></div>
-      <div class="pitem"><span>Free Consultation Support</span><span class="ck">✓</span></div>
-      <div class="pitem"><span>Free Home Delivery</span><span class="ck">✓</span></div>
-    </div>
-    <div class="pdisplay">
-      <div class="pold"><span class="plabel">Original Price</span><span class="pamt">₹7,000</span></div>
-      <span class="parr">→</span>
-      <div class="pnew"><span class="plabel">आपका Price</span><span class="pamt">₹4,000</span></div>
-    </div>
-    <div class="psave">आपकी बचत: ₹3,000 (43% OFF)</div>
-    <a href="tel:+919999999999" class="btn btn-full btn-lg" style="margin-bottom:16px">
-      📞 Call करें &amp; Order करें
-      <small style="font-size:.72rem;font-weight:400;opacity:.85">Cash on Delivery Available</small>
-    </a>
-    <div class="ptrust">
-      <span>🔒 Secure</span><span>🚚 Fast Delivery</span><span>↩️ Easy Return</span><span>⭐ 4.8 Rated</span>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testi-sec" id="reviews">
-  <div class="sec-label">Customer Reviews</div>
-  <h2 class="sec-title">हमारे <span>खुश ग्राहक</span></h2>
-  <p class="sec-sub">Real लोग, Real Results — देखें उनकी कहानियां</p>
-  <div class="slider-wrap">
-    <button class="sarrow" id="prev">&#8249;</button>
-    <div class="track-cont">
-      <div class="vtrack" id="vtrack">
-        <div class="vslide"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 1</div></div><div class="vname">— राहुल शर्मा, दिल्ली</div><div class="vstars">★★★★★</div></div>
-        <div class="vslide active"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 2</div></div><div class="vname">— प्रिया सिंह, मुंबई</div><div class="vstars">★★★★★</div></div>
-        <div class="vslide"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 3</div></div><div class="vname">— अनिल कुमार, पटना</div><div class="vstars">★★★★★</div></div>
-        <div class="vslide"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 4</div></div><div class="vname">— सुनीता देवी, लखनऊ</div><div class="vstars">★★★★★</div></div>
-        <div class="vslide"><div class="vthumb"><div class="vplay">▶</div><div class="vtxt">Customer Video 5</div></div><div class="vname">— विकास गुप्ता, जयपुर</div><div class="vstars">★★★★★</div></div>
-      </div>
-    </div>
-    <button class="sarrow" id="next">&#8250;</button>
-  </div>
-  <div class="sdots" id="sdots"></div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="flogo">
-    <img src="logo.png" alt="RN Herbal" onerror="this.style.display='none'">
-    <span>RN Herbal</span>
-  </div>
-  <p class="ftag">प्रकृति की शक्ति, आपके स्वास्थ्य के लिए</p>
-  <p class="fdis">* यह product Ayurvedic है। Results may vary. Consult a doctor if needed. यह किसी बीमारी का medical treatment नहीं है।</p>
-  <p class="fcopy">© 2026 RN Herbal. All Rights Reserved.</p>
-</footer>
-
-<script>
-// Sticky nav
-const snav=document.getElementById('snav');
-new IntersectionObserver(([e])=>snav.classList.toggle('show',!e.isIntersecting),{threshold:.05}).observe(document.querySelector('.hero'));
-
-// Slider
-const track=document.getElementById('vtrack');
-const slides=[...track.querySelectorAll('.vslide')];
-const dotsEl=document.getElementById('sdots');
-let cur=1;
-slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===cur?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);});
-function go(n){
-  cur=Math.max(0,Math.min(slides.length-1,n));
-  slides.forEach((s,i)=>s.classList.toggle('active',i===cur));
-  [...dotsEl.querySelectorAll('.dot')].forEach((d,i)=>d.classList.toggle('on',i===cur));
-  const cw=track.parentElement.offsetWidth;
-  let off=0;
-  for(let i=0;i<cur;i++)off+=(slides[i].offsetWidth||180)+20;
-  off-=cw/2-(slides[cur].offsetWidth||220)/2;
-  track.style.transform=`translateX(-${Math.max(0,off)}px)`;
-}
-document.getElementById('prev').onclick=()=>go(cur-1);
-document.getElementById('next').onclick=()=>go(cur+1);
-let tx=0;
-track.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
-track.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40)go(cur+(d>0?1:-1));},{passive:true});
-window.addEventListener('load',()=>go(1));
-window.addEventListener('resize',()=>go(cur));
-setInterval(()=>go((cur+1)%slides.length),5000);
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-60,behavior:'smooth'});}
-  });
-});
-</script>
-</b
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RN Herbal \u2013 Stone Crash & Stone-Go</title>
+<title>RN Herbal – Stone Crash & Stone-Go</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{--g1:#0d3d2b;--g2:#1a6644;--g3:#2d9b5f;--ga:#3dbf77;--gold:#c9a84c;--goldf:#f0cc6a;--org:#e8601a;--bg:#f4f9f5;--tx:#1a1a1a;--txm:#555;--sh:0 8px 32px rgba(13,61,43,.13)}
@@ -308,7 +96,7 @@ img{max-width:100%;display:block}
 .ptrust{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
 .ptrust span{font-size:.73rem;font-weight:600;color:var(--txm);background:var(--bg);padding:4px 12px;border-radius:50px;border:1px solid rgba(0,0,0,.08)}
 
-/* \u2550\u2550 TESTIMONIALS \u2014 smooth scroll-snap slider \u2550\u2550 */
+/* ══ TESTIMONIALS — smooth scroll-snap slider ══ */
 .testi-sec{padding:72px 0 50px;background:#fff;overflow:hidden}
 .testi-sec .sec-label,.testi-sec .sec-title,.testi-sec .sec-sub{padding:0 20px}
 
@@ -335,4 +123,323 @@ img{max-width:100%;display:block}
 }
 .vslide.active{opacity:1;transform:scale(1.06)}
 
-/* Blank video card \u2014 add your 
+/* Blank video card — add your <video> or <iframe> inside .vthumb */
+.vthumb{
+  width:100%;
+  aspect-ratio:9/16;
+  background:#0e1628;
+  border-radius:16px;
+  border:2px solid rgba(255,255,255,.07);
+  box-shadow:0 8px 32px rgba(0,0,0,.22);
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:border-color .25s;
+  cursor:pointer;
+}
+.vslide.active .vthumb{border-color:var(--gold);box-shadow:0 12px 40px rgba(201,168,76,.25)}
+.vthumb:hover{border-color:rgba(61,191,119,.45)}
+
+.vtxt{font-size:.7rem;color:rgba(255,255,255,.2);letter-spacing:.5px;pointer-events:none;user-select:none}
+
+/* Real video/iframe fills the card */
+.vthumb video,.vthumb iframe{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none;
+}
+
+.vname{font-size:.8rem;font-weight:600;color:var(--txm);margin-top:10px}
+.vstars{color:var(--gold);font-size:.85rem;margin-top:4px;letter-spacing:2px}
+
+/* Arrow buttons */
+.sarrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;
+  border:2px solid var(--g2);background:#fff;color:var(--g1);
+  font-size:1.4rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--sh);z-index:10;
+  transition:background .22s,color .22s,transform .22s;
+}
+.sarrow:hover{background:var(--g2);color:#fff;transform:translateY(-50%) scale(1.1)}
+.sarrow:active{transform:translateY(-50%) scale(.94)}
+#prev{left:6px}
+#next{right:6px}
+
+/* Dots */
+.sdots{display:flex;justify-content:center;gap:7px;padding:4px 0 36px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(45,155,95,.2);cursor:pointer;transition:all .25s ease}
+.dot.on{width:24px;border-radius:4px;background:var(--g2)}
+
+/* FOOTER */
+footer{background:#050f09;padding:36px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.flogo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px}
+.flogo img{height:46px}
+.flogo span{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff}
+.ftag{font-family:'Noto Sans Devanagari',sans-serif;font-size:.85rem;color:var(--ga);margin-bottom:14px;opacity:.8}
+.fdis{font-size:.68rem;color:rgba(255,255,255,.28);line-height:1.7;max-width:560px;margin:0 auto 12px}
+.fcopy{font-size:.7rem;color:rgba(255,255,255,.2)}
+
+@media(max-width:640px){
+  .hero-logo img{height:50px}
+  .btn{padding:10px 16px;font-size:.82rem}
+  .pnew .pamt{font-size:2.2rem}
+  .vslide{flex:0 0 150px}
+  .vtrack{padding:8px 40px 16px}
+  .pcrd{padding:28px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="snav" id="snav">
+  <div class="snav-in">
+    <div class="snav-logo">
+      <img src="logo.png" alt="RN Herbal" onerror="this.style.display='none'">
+      <span>RN Herbal</span>
+    </div>
+    <a href="#order" class="btn">🛒 Order Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-top">
+    <div class="hero-logo">
+      <img src="logo.png" alt="RN Herbal" onerror="this.style.display='none'">
+    </div>
+    <a href="#order" class="btn">🛒 Order Now</a>
+  </div>
+  <div class="hero-body">
+    <div class="pill">⚠️ Ayurvedic Solution</div>
+    <h1 class="hook">
+      यदि अल्ट्रासाउन्ड रिपोर्टमा <span class="glow">पत्थरी देखियो भने</span><br>
+      र डाक्टरले <span class="glo2">शल्यक्रिया सुझाव दिन्छन् भने —</span>
+    </h1>
+    <div class="hero-divider"></div>
+    <div class="stop-box">🛑 <strong>त्यसैले अब पर्खनुहोस्</strong> 🛑</div>
+    <a href="#order" class="btn btn-gold btn-lg">✨ अभी Order करें – ₹4,000 में</a>
+  </div>
+</header>
+
+<!-- PRODUCTS -->
+<section class="sec" id="products">
+  <div class="sec-label">हमारे उत्पाद</div>
+  <h2 class="sec-title">Kidney & Gallbladder Stone का<br><span>प्राकृतिक समाधान</span></h2>
+  <p class="sec-sub">100% Ayurvedic • No Side Effects • Trusted by Thousands</p>
+  <div class="prod-grid">
+    <div class="pcard">
+      <div class="pbadge">Best Seller</div>
+      <div class="pimg"><div class="pbox pw"><div class="ico">🌿</div><div class="lbl">STONE<br>CRASH</div><div class="sub">Powder</div></div></div>
+      <div class="pinfo">
+        <h3>Stone Crash Powder</h3>
+        <p class="ptag">Ayurvedic Treatment for Kidney & Gallbladder Stone</p>
+        <ul class="pbens">
+          <li>✅ Kidney & Gallbladder Stone को तोड़ता है</li>
+          <li>✅ Urinary Tract Infection में असरदार</li>
+          <li>✅ Kidney को Naturally Protect करता है</li>
+          <li>✅ दर्द और जलन से तुरंत राहत</li>
+        </ul>
+        <span class="pmeta">100 GM | Powder Form</span>
+      </div>
+    </div>
+    <div class="pcard feat">
+      <div class="pbadge pfeat-badge">Most Effective</div>
+      <div class="pimg"><div class="pbox pc"><div class="ico">💊</div><div class="lbl">STONE<br>GO</div><div class="sub">Capsule</div></div></div>
+      <div class="pinfo">
+        <h3>Stone-Go Capsule</h3>
+        <p class="ptag">Ayurvedic Treatment for Kidney & Gallbladder Stone</p>
+        <ul class="pbens">
+          <li>✅ Stone को पूरी तरह Dissolve करे</li>
+          <li>✅ Gallbladder Stone के लिए प्रभावी</li>
+          <li>✅ Renal Colic & Strangury में राहत</li>
+          <li>✅ Urinary Bladder Stone में असरदार</li>
+        </ul>
+        <span class="pmeta">60 Capsules | Easy to Take</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-bg" id="order">
+  <div class="sec-label">Special Offer</div>
+  <h2 class="sec-title">आज ही Order करें —<br><span>Limited Time Offer!</span></h2>
+  <div class="pcrd">
+    <div class="pribbon">🔥 43% से ज़्यादा OFF</div>
+    <div class="pitems">
+      <div class="pitem"><span>Stone Crash Powder (100gm)</span><span class="ck">✓</span></div>
+      <div class="pitem"><span>Stone-Go Capsule (60 Caps)</span><span class="ck">✓</span></div>
+      <div class="pitem"><span>Free Consultation Support</span><span class="ck">✓</span></div>
+      <div class="pitem"><span>Free Home Delivery</span><span class="ck">✓</span></div>
+    </div>
+    <div class="pdisplay">
+      <div class="pold"><span class="plabel">Original Price</span><span class="pamt">₹7,000</span></div>
+      <span class="parr">→</span>
+      <div class="pnew"><span class="plabel">आपका Price</span><span class="pamt">₹4,000</span></div>
+    </div>
+    <div class="psave">आपकी बचत: ₹3,000 (43% OFF)</div>
+    <a href="tel:+919999999999" class="btn btn-full btn-lg" style="margin-bottom:16px">
+      📞 Call करें &amp; Order करें
+      <small style="font-size:.72rem;font-weight:400;opacity:.85">Cash on Delivery Available</small>
+    </a>
+    <div class="ptrust">
+      <span>🔒 Secure</span><span>🚚 Fast Delivery</span><span>↩️ Easy Return</span><span>⭐ 4.8 Rated</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-sec" id="reviews">
+  <div class="sec-label">Customer Reviews</div>
+  <h2 class="sec-title">हमारे <span>खुश ग्राहक</span></h2>
+  <p class="sec-sub">Real लोग, Real Results — देखें उनकी कहानियां</p>
+
+  <div class="slider-outer">
+    <button class="sarrow" id="prev">&#8249;</button>
+    <button class="sarrow" id="next">&#8250;</button>
+
+    <div class="vtrack" id="vtrack">
+
+      <div class="vslide" data-i="0">
+        <div class="vthumb">
+          <!-- 📹 Add Video 1 here:
+               <video src="video1.mp4" controls playsinline></video>
+               OR YouTube: <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+          <div class="vtxt">Video 1</div>
+        </div>
+        <div class="vname">— राहुल शर्मा, दिल्ली</div>
+        <div class="vstars">★★★★★</div>
+      </div>
+
+      <div class="vslide" data-i="1">
+        <div class="vthumb">
+          <!-- 📹 Add Video 2 here -->
+          <div class="vtxt">Video 2</div>
+        </div>
+        <div class="vname">— प्रिया सिंह, मुंबई</div>
+        <div class="vstars">★★★★★</div>
+      </div>
+
+      <div class="vslide" data-i="2">
+        <div class="vthumb">
+          <!-- 📹 Add Video 3 here -->
+          <div class="vtxt">Video 3</div>
+        </div>
+        <div class="vname">— अनिल कुमार, पटना</div>
+        <div class="vstars">★★★★★</div>
+      </div>
+
+      <div class="vslide" data-i="3">
+        <div class="vthumb">
+          <!-- 📹 Add Video 4 here -->
+          <div class="vtxt">Video 4</div>
+        </div>
+        <div class="vname">— सुनीता देवी, लखनऊ</div>
+        <div class="vstars">★★★★★</div>
+      </div>
+
+      <div class="vslide" data-i="4">
+        <div class="vthumb">
+          <!-- 📹 Add Video 5 here -->
+          <div class="vtxt">Video 5</div>
+        </div>
+        <div class="vname">— विकास गुप्ता, जयपुर</div>
+        <div class="vstars">★★★★★</div>
+      </div>
+
+    </div>
+  </div>
+  <div class="sdots" id="sdots"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="flogo">
+    <img src="logo.png" alt="RN Herbal" onerror="this.style.display='none'">
+    <span>RN Herbal</span>
+  </div>
+  <p class="ftag">प्रकृति की शक्ति, आपके स्वास्थ्य के लिए</p>
+  <p class="fdis">* यह product Ayurvedic है। Results may vary. Consult a doctor if needed. यह किसी बीमारी का medical treatment नहीं है।</p>
+  <p class="fcopy">© 2026 RN Herbal. All Rights Reserved.</p>
+</footer>
+
+<script>
+// ── Sticky nav ──────────────────────────────────────
+const snav = document.getElementById('snav');
+new IntersectionObserver(
+  ([e]) => snav.classList.toggle('show', !e.isIntersecting),
+  { threshold: .05 }
+).observe(document.querySelector('.hero'));
+
+// ── Scroll-snap slider ──────────────────────────────
+const track  = document.getElementById('vtrack');
+const slides = [...track.querySelectorAll('.vslide')];
+const dotsEl = document.getElementById('sdots');
+let cur = 0;
+
+// Build dots
+slides.forEach((_, i) => {
+  const d = document.createElement('span');
+  d.className = 'dot' + (i === 0 ? ' on' : '');
+  d.onclick = () => goTo(i);
+  dotsEl.appendChild(d);
+});
+
+function goTo(n) {
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  cur = n;
+  slides.forEach((s, i) => s.classList.toggle('active', i === n));
+  [...dotsEl.querySelectorAll('.dot')].forEach((d, i) => d.classList.toggle('on', i === n));
+  const slide  = slides[n];
+  const trackW = track.offsetWidth;
+  const slideW = slide.offsetWidth;
+  track.scrollTo({ left: slide.offsetLeft - trackW / 2 + slideW / 2, behavior: 'smooth' });
+}
+
+// Arrow buttons
+document.getElementById('prev').onclick = () => goTo(cur - 1);
+document.getElementById('next').onclick = () => goTo(cur + 1);
+
+// Touch / swipe support
+let touchX = 0;
+track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+track.addEventListener('touchend',   e => {
+  const diff = touchX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40) goTo(cur + (diff > 0 ? 1 : -1));
+}, { passive: true });
+
+// Keep dots in sync when user finger-scrolls freely
+track.addEventListener('scroll', () => {
+  const centre = track.scrollLeft + track.offsetWidth / 2;
+  let closest = 0, minDist = Infinity;
+  slides.forEach((s, i) => {
+    const dist = Math.abs(s.offsetLeft + s.offsetWidth / 2 - centre);
+    if (dist < minDist) { minDist = dist; closest = i; }
+  });
+  if (closest !== cur) {
+    cur = closest;
+    slides.forEach((s, i) => s.classList.toggle('active', i === cur));
+    [...dotsEl.querySelectorAll('.dot')].forEach((d, i) => d.classList.toggle('on', i === cur));
+  }
+}, { passive: true });
+
+// Auto-advance every 5 s
+setInterval(() => goTo((cur + 1) % slides.length), 5000);
+
+// Init
+window.addEventListener('load',   () => goTo(0));
+window.addEventListener('resize', () => goTo(cur));
+
+// ── Smooth anchor scroll ────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 60, behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>

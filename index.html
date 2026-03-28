@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RN Herbal – Stone Crash & Stone-Go</title>
+<title>RN Herbal \u2013 Stone Crash & Stone-Go</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{--g1:#0d3d2b;--g2:#1a6644;--g3:#2d9b5f;--ga:#3dbf77;--gold:#c9a84c;--goldf:#f0cc6a;--org:#e8601a;--bg:#f4f9f5;--tx:#1a1a1a;--txm:#555;--sh:0 8px 32px rgba(13,61,43,.13)}
@@ -42,8 +42,6 @@ img{max-width:100%;display:block}
 .hook .glow{color:var(--ga)}
 .hook .glo2{color:var(--goldf);font-weight:800}
 .stop-box{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#d32f2f,#b71c1c);color:#fff;font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(.9rem,2.2vw,1.25rem);font-weight:800;padding:11px 24px;border-radius:9px;margin-bottom:20px;box-shadow:0 5px 0 #7f0000,0 8px 24px rgba(211,47,47,.35)}
-.hero-sub{font-size:.95rem;color:rgba(255,255,255,.82);margin-bottom:26px;line-height:1.65}
-.hero-sub strong{color:var(--ga)}
 .hero-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--ga),var(--goldf));border-radius:2px;margin:0 auto 26px;opacity:.7}
 
 /* SECTION */
@@ -69,6 +67,63 @@ img{max-width:100%;display:block}
 .pw .lbl{color:var(--g1)}.pc .lbl{color:#ff8040}
 .pbox .sub{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
 .pw .sub{color:var(--g2)}.pc .sub{color:rgba(255,255,255,.5)}
+.pinfo{padding:18px 20px 24px}
+.pinfo h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--g1);margin-bottom:5px}
+.ptag{font-size:.82rem;color:var(--txm);margin-bottom:12px;line-height:1.5}
+.pbens{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.pbens li{font-size:.84rem;color:#333;line-height:1.4}
+.pmeta{display:inline-block;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:50px}
+
+/* PRICING */
+.pricing-bg{background:linear-gradient(160deg,var(--g1),#0f4a33);padding:72px 20px}
+.pricing-bg .sec-label{color:var(--ga)}
+.pricing-bg .sec-title{color:#fff;margin-bottom:36px}
+.pricing-bg .sec-title span{color:var(--goldf)}
+.pcrd{max-width:580px;margin:0 auto;background:#fff;border-radius:28px;padding:40px 32px;position:relative;text-align:center;box-shadow:0 20px 80px rgba(0,0,0,.3);overflow:hidden}
+.pcrd::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--g2),var(--gold),var(--g3))}
+.pribbon{display:inline-block;background:linear-gradient(135deg,var(--org),#c0380a);color:#fff;font-size:.78rem;font-weight:700;padding:5px 18px;border-radius:50px;margin-bottom:24px;box-shadow:0 4px 14px rgba(232,96,26,.35);animation:pulse 2.5s ease-in-out infinite}
+.pitems{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;text-align:left}
+.pitem{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(135deg,#edf8f2,#ddf2e8);border-radius:10px;border-left:4px solid var(--ga)}
+.pitem span{font-size:.86rem;font-weight:500;color:#333}
+.pitem .ck{color:var(--g3);font-weight:700;font-size:1.1rem}
+.pdisplay{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:14px}
+.pold,.pnew{display:flex;flex-direction:column;align-items:center;gap:3px}
+.plabel{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--txm)}
+.pold .pamt{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:#999;text-decoration:line-through}
+.parr{font-size:1.4rem;color:var(--g2);font-weight:900}
+.pnew .pamt{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--g1);line-height:1}
+.psave{display:inline-block;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:.82rem;font-weight:700;padding:7px 20px;border-radius:50px;margin-bottom:28px}
+.ptrust{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
+.ptrust span{font-size:.73rem;font-weight:600;color:var(--txm);background:var(--bg);padding:4px 12px;border-radius:50px;border:1px solid rgba(0,0,0,.08)}
+
+/* \u2550\u2550 TESTIMONIALS \u2014 smooth scroll-snap slider \u2550\u2550 */
+.testi-sec{padding:72px 0 50px;background:#fff;overflow:hidden}
+.testi-sec .sec-label,.testi-sec .sec-title,.testi-sec .sec-sub{padding:0 20px}
+
+.slider-outer{position:relative;padding:36px 0 20px}
+
+.vtrack{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scroll-behavior:smooth;
+  padding:8px 60px 16px;
+  scrollbar-width:none;
+}
+.vtrack::-webkit-scrollbar{display:none}
+
+.vslide{
+  flex:0 0 200px;
+  scroll-snap-align:center;
+  text-align:center;
+  transition:opacity .3s ease, transform .3s ease;
+  opacity:.6;
+}
+.vslide.active{opacity:1;transform:scale(1.06)}
+
+/* Blank video card \u2014 add your .pw .sub{color:var(--g2)}.pc .sub{color:rgba(255,255,255,.5)}
 .pinfo{padding:18px 20px 24px}
 .pinfo h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--g1);margin-bottom:5px}
 .ptag{font-size:.82rem;color:var(--txm);margin-bottom:12px;line-height:1.5}
